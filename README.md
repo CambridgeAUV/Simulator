@@ -16,6 +16,6 @@ First use `catkin_make` to build the node
 
 ### Publishes
 
-* /landmark_observations - An array of landmarks, for details see msg folder
+* /landmark_observations - An observation message, for details see msg folder
 
 ### Subscribes
