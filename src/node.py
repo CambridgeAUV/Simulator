@@ -11,6 +11,7 @@ import math
 
 class Node:
     def __init__(self):
+
         #initialize ros node
         rospy.init_node('Simulator')
         self.pub = rospy.Publisher('landmark_observations', Observation)
@@ -20,8 +21,8 @@ class Node:
             self.publish_observation,
             20, (500, 500),
             start_param=(250, 250, math.pi / 2),
-            magnitude_stddev=1,
-            argument_stddev=1)
+            magnitude_stddev=0,
+            argument_stddev=0)
 
     def run(self):
         self.sim.run()

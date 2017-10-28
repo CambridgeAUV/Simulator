@@ -130,8 +130,8 @@ class Simulation:
                         mag = self.add_gaussian_noise(mag, self.magnitude_stddev)
                     if self.argument_stddev > 0:
                         arg = self.add_gaussian_noise(arg, self.argument_stddev)
-                    # calculate the bearing relative to the center of the sonar shell
-                    # left is positive and right is negative
+                    # calculate the bearing relative to the heading of the AUV
+                    # Anti-clockwise
                     angle_rel_heading = self.normalize_angle(arg - self.auv_pos[2])
                     observations.append([index, mag, angle_rel_heading])
 
